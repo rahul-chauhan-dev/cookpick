@@ -25,4 +25,8 @@ public class ProductService {
 	public List<ProductDTO> getProducts(String productName, String productVendor) {
 		return repository.getProducts(productName, productVendor);
 	}
+
+	public List<ProductDTO> getProducts(List<String> vendors) {
+		return repository.getProducts(vendors);
+	}
 }

@@ -1,10 +1,12 @@
 package com.cookpick.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.MatrixVariable;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -38,5 +40,9 @@ public class ProductController {
 		return service.getProducts(productName, productVendor);
 	}
 	
-
+	@GetMapping(value="/{query}/products", produces="Application/json")
+	public List<ProductDTO> getProducts(@MatrixVariable(pathVar="query") Map<String, List<String>> map){
+		List<String> vendors=map.get("vendor");
+		return service.getProducts(vendors);
+	}
 }
