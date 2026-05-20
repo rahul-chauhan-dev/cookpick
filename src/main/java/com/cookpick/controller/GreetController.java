@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class GreetController {
 	
 	@GetMapping("/greet")
-	public String geet() {
+	public String greet() {
 		String day = LocalDate.now().getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.ENGLISH);
 		return "Welcome to " + day + " sale";
 	}

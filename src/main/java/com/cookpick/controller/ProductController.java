@@ -16,7 +16,7 @@ import com.cookpick.dto.ProductDTO;
 import com.cookpick.service.ProductService;
 
 @RestController
-@RequestMapping("/products")
+@RequestMapping("/product")
 public class ProductController {
 
 	@Autowired

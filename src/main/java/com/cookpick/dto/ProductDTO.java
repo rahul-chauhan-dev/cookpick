@@ -1,11 +1,11 @@
 package com.cookpick.dto;
 
 public class ProductDTO {
-	long productCode;
-	String productName;
-	String productVendor;
-	double productPrice;
-	int productInStock;
+	private long productCode;
+	private String productName;
+	private String productVendor;
+	private double productPrice;
+	private int productInStock;
 	
 	public long getProductCode() {
 		return productCode;
@@ -39,10 +39,9 @@ public class ProductDTO {
 	}
 	@Override
 	public String toString() {
-		return "ProductDTO [productCode=" + productCode + ", productName=" + productName + ", productVendor="
-				+ productVendor + ", productPrice=" + productPrice + ", productInStock=" + productInStock
-				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
-				+ "]";
+		return "ProductDTO [productCode=" + productCode + ", productName=" + productName + 
+			       ", productVendor=" + productVendor + ", productPrice=" + productPrice + 
+			       ", productInStock=" + productInStock + "]";
 	}
 	
 	
